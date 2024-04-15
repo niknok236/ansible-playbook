@@ -7,7 +7,7 @@
       fetch:
          src: '/tmp/semaphore/*'
          dest: '/tmp/'
-         remote_src: false
+      remote_src: false
       check_mode: false
       changed_when: false
          

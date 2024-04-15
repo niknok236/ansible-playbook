@@ -10,7 +10,7 @@
         become: yes 
         become_user: root
         delegate_to: localhost
-        src: /etc/ansible/test.txt
+        src: /tmp/semaphore/Linux_updates.yml
         dest: /tmp/
         mode: 0755
         remote_src: false

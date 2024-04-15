@@ -13,5 +13,5 @@
         src: /tmp/az_connect_linux.sh
         dest: /tmp/az_connect_linux.sh
         mode: 0755
-        remote_src: true
+        remote_src: false
       

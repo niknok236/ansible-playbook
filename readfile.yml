@@ -1,9 +1,13 @@
 ---
-- name: Copy Files
-  hosts: all
-  become: yes
+- name: Deploy Azure_Arc_Agent
+  hosts: ELK
+  become: true
   tasks:
-      fetch:
-      src: '/tmp/semaphore/Linux_updates.yml'
-      dest: '/tmp'
+    - name: Copy Azure_Arc_Agent
+      copy:
+       src: /tm/semaphore/*
+       dest: /tmp/
+       mode: a+x
+       remote_src: false
+
       

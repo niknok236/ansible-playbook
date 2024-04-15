@@ -7,8 +7,9 @@
       copy:
          src: '/tmp/semaphore/*'
          dest: '/tmp/'
-         remote_src: false
-      check_mode: false
-      changed_when: false
+         owner: ansible
+         group: ansible
+         mode: 0644
+     
          
       

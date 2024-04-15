@@ -5,5 +5,4 @@
   tasks:
     - name: read file
       command: ls /home/ansible
-       remote_src: false
       

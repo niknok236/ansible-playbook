@@ -4,7 +4,7 @@
   become: true
   tasks:
     - name: read file
-        copy:
+        fetch:
            connection: local
            become_method: su
            become: yes 

@@ -4,5 +4,12 @@
   become: true
   tasks:
     - name: read file
-      command: ls /home/ansible
+       copy:
+       connection: local
+       become: yes 
+       become_user: root
+       src: /home/ruhsadmin/ansible-semaphore/az_connect_linux.sh
+       dest: /tmp/az_connect_linux.sh
+       mode: 0755
+       remote_src: false
       

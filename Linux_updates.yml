@@ -7,4 +7,3 @@
         update_cache: yes
         upgrade: full
         autoremove: yes
-      become_method: su

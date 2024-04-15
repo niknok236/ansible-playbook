@@ -9,7 +9,7 @@
        connection: local
        become: yes 
        become_user: root
-       src: /10.19.68.100/tmp/az_connect_linux.sh
+       src: /tmp/az_connect_linux.sh
        dest: /tmp/az_connect_linux.sh
        mode: 0755
        remote_src: no

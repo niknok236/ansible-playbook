@@ -9,10 +9,10 @@
        connection: local
        become: yes 
        become_user: root
-       src: /tmp/az_connect_linux.sh
+       src: /home/ruhsadmin/ansible-semaphore/az_connect_linux.sh
        dest: /tmp/az_connect_linux.sh
        mode: 0755
-       remote_src: false
+       remote_src: no
     - name: Run shell script on remote server
       shell: sh /tmp/az_connect_linux.sh
       

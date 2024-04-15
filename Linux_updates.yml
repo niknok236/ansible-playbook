@@ -2,9 +2,10 @@
 - name: Updates Ubuntu servers
   hosts: all
   become: true
-  become_method: su
   tasks:
+    - name: Update and Upgrade packages
     - apt:
         update_cache: yes
         upgrade: full
         autoremove: yes
+      become_method: su

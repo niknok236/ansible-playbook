@@ -9,6 +9,5 @@
          dest: '/tmp/'
       check_mode: false
       changed_when: false
-      delegate_to: localhost
          
       

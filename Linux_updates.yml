@@ -3,7 +3,6 @@
   hosts: all
   become: true
   tasks:
-    - name: Update and Upgrade packages
     - apt:
         update_cache: yes
         upgrade: full

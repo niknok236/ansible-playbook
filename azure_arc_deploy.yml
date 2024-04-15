@@ -9,14 +9,14 @@
        connection: local
        become: yes 
        become_user: root
-       src: /tmp/az_connect_linux.sh
-       dest: /tmp/az_connect_linux.sh
+       src:  /tmp/semaphore/Linux_updates.yml
+       dest: /tmp/
        mode: 0755
        remote_src: no
     - name: Run shell script on remote server
-      shell: sh /tmp/az_connect_linux.sh
+      #shell: sh /tmp/az_connect_linux.sh
       
-    - name: Remove shell script from remote server
-      file:
-        path: /tmp/az_connect_linux.sh
-        state: absent
+   # - name: Remove shell script from remote server
+      #file:
+       # path: /tmp/az_connect_linux.sh
+       # state: absent

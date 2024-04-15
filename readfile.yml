@@ -5,7 +5,7 @@
   tasks:
     - name: Copy Azure_Arc_Agent
       copy:
-         src: '/home/ansible/tes'
+         src: '/home/ansible/test'
          dest: '/tmp/'
          owner: ansible
          group: ansible

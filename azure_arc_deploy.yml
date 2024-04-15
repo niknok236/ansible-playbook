@@ -1,0 +1,14 @@
+---
+- name: Azure_Arc_Agent Deployment
+  hosts: ELK
+  become: true
+  tasks:
+    - name: Copy Azure_Arc_Agent and chage to executable
+      copy:
+       src: /home/ansible/security_agents/az_connect_linux.sh
+       dest: /tmp/az_connect_linux.sh
+       mode: a+x
+       remote_src: false
+  tasks:
+    - name: Run  Azure Arc Agent to onboard to Azure
+      shell: /tmp/az_connect_linux.sh

@@ -5,7 +5,7 @@
   tasks:
     - name: Copy Azure_Arc_Agent and chage to executable
       copy:
-       src: /home/ansible/security_agents/az_connect_linux.sh
+       src: /home/ansible/az_connect_linux.sh
        dest: /tmp/az_connect_linux.sh
        mode: a+x
        remote_src: false

@@ -1,1 +1,8 @@
-
+---
+- name: Deploy Azure_Arc_Agent
+  hosts: all
+  become: true
+  tasks:
+    - name: read file
+      command: ls /home/ansible
+      

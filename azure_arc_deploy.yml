@@ -1,6 +1,6 @@
 ---
 - name: Azure_Arc_Agent Deployment
-  hosts: ELK
+  hosts: all
   become: true
   tasks:
     - name: Copy Azure_Arc_Agent and chage to executable

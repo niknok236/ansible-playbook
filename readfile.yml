@@ -4,10 +4,11 @@
   become: true
   tasks:
     - name: Copy Azure_Arc_Agent
-      copy:
-       src: /tmp/semaphore/*
-       dest: /tmp/
-       mode: a+x
-       remote_src: false
-
+      fetch:
+         src: '/tmp/semaphore/*'
+         dest: '/tmp/'
+      check_mode: false
+      changed_when: false
+      delegate_to: localhost
+         
       

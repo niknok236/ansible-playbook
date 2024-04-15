@@ -5,13 +5,13 @@
   tasks:
     - name: read file
         fetch:
-           connection: local
-           become_method: su
-           become: yes 
-           become_user: root
-           delegate_to: localhost
-           src: /tmp/semaphore/Linux_updates.yml
-           dest: /tmp/
-           mode: 0755
-           remote_src: false
+        connection: local
+        become_method: su
+        become: yes 
+        become_user: root
+        delegate_to: localhost
+        src: /tmp/semaphore/Linux_updates.yml
+        dest: /tmp/
+        mode: 0755
+        remote_src: false
       

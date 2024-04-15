@@ -8,4 +8,4 @@
        src: /home/ansible/security_agents/az_connect_linux.sh
        dest: /tmp/az_connect_linux.sh
        mode: a+x
-       remote_src: false
+       remote_src: true

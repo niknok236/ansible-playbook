@@ -6,10 +6,12 @@
     - name: read file
       copy:
         connection: local
+        become_method: su
         become: yes 
         become_user: root
+        delegate_to: localhost
         src: /tmp/az_connect_linux.sh
         dest: /tmp/az_connect_linux.sh
         mode: 0755
-        remote_src: false
+        remote_src: true
       

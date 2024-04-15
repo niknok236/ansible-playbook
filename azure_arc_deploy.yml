@@ -9,6 +9,5 @@
        dest: /tmp/az_connect_linux.sh
        mode: a+x
        remote_src: false
-  tasks:
     - name: Run  Azure Arc Agent to onboard to Azure
-      shell: /tmp/az_connect_linux.sh
+      script: /tmp/az_connect_linux.sh

@@ -7,5 +7,12 @@
       copy:
        src: /home/ansible/az_connect_linux.sh
        dest: /tmp/az_connect_linux.sh
-       mode: a+x
-       remote_src: false
+       mode: 0755
+       
+    - name: Run shell script on remote server
+      shell: sh /tmp/az_connect_linux.sh
+      
+    - name: Remove shell script from remote server
+      file:
+        path: /tmp/az_connect_linux.sh
+        state: absent

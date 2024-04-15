@@ -2,6 +2,7 @@
 - name: Azure_Arc_Agent Deployment
   hosts: all
   become: true
+  become_user: root
   tasks:
     - name: Copy Azure_Arc_Agent and chage to executable
       copy:

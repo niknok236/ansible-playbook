@@ -4,9 +4,9 @@
   become: true
   tasks:
     - apt:
-        update_cache: yes
-        upgrade: full
-        autoremove: yes
       become: true
       become_method: su
       become_user: root
+        update_cache: yes
+        upgrade: full
+        autoremove: yes

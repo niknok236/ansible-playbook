@@ -7,7 +7,7 @@
         copy:
           src: '/tmp/az_connect_linux.sh'
           dest: '/tmp/'
-          remote_src: no
+        remote_src: no
         become_user: root
         become_method: su
         remote_src: no

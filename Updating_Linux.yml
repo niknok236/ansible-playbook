@@ -1,0 +1,21 @@
+---
+- name: Update Ubuntu servers
+  hosts: ubuntu
+  become: true
+  tasks:
+    - apt:
+        update_cache: yes
+        upgrade: full
+        autoremove: yes
+      become_user: root
+      become_method: su
+- name: Update CentOS servers
+  hosts: centos
+  become: true
+  tasks:
+    - dnf:
+        update_cache: yes
+        name: "*"
+        state: latest
+      become_user: root
+      become_method: su 

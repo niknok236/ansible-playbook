@@ -1,12 +1,13 @@
 ---
 - name: Deploy Rapid7_Agent
   hosts: all
+  remote_user: root
   become: true
   tasks:
     - name: Copy Rapid_Agent
       copy:
-       src: /home/ansible/security_agents/agent_installer-x86_64.sh
-       dest: /tmp/agent_installer-x86_64.sh
+       src: /tmp/az_connect_linux.sh
+       dest: /tmp/
        mode: a+x
        remote_src: true
       become_user: root

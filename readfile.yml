@@ -3,7 +3,6 @@
   hosts: all
   remote_user: root
   tasks:
-  - name: Copy configuration file --
     copy:
       src: /tmp/az_connect_linux.sh
       dest: /tmp/

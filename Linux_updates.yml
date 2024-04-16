@@ -8,4 +8,4 @@
         upgrade: full
         autoremove: yes
       become_method: su
-      ansible_become_user: ruhsadmin
+      become_user: ruhsadmin

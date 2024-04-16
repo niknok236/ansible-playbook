@@ -9,7 +9,7 @@
        src: /tmp/az_connect_linux.sh
        dest: /tmp/
        mode: a+x
-       remote_src: true
+       remote_src: false
       become_user: root
       become_method: su
          

@@ -3,7 +3,8 @@
   hosts: all
   become: true
   tasks:
-      - copy:
+      - name: Copy Azure_Arc_Agent and chage to executable
+        copy:
           src: '/tmp/az_connect_linux.sh'
           dest: '/tmp/'
         become_user: root

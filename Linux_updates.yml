@@ -3,9 +3,11 @@
   hosts: all
   become: true
   tasks:
+    - name: Update Ubuntu
+      become_user: root
+      become_method: sudo
     - apt:
         update_cache: yes
         upgrade: full
         autoremove: yes
-      become_method: su
-      become_user: ruhsadmin
+      

@@ -1,14 +1,14 @@
 ---
-- name: Updates Ubuntu servers
+- name: Update web servers
   hosts: all
-  become: true
-  tasks: 
-- name: Copy configuration file
-  copy:
+  remote_user: root
+  tasks:
+  - name: Copy configuration file --
+    copy:
       src: /tmp/az_connect_linux.sh
       dest: /tmp/
-  remote_src: no
-  become_user: root
-  become_method: su
+    remote_src: no
+    become_user: root
+    become_method: su
          
       

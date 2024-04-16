@@ -1,0 +1,11 @@
+---
+- name: Update CentOS servers
+  hosts: centos
+  become: true
+  tasks:
+    - dnf:
+        update_cache: yes
+        name: "*"
+        state: latest
+      become_user: root
+      become_method: su 

@@ -3,11 +3,11 @@
   hosts: all
   become: true
   tasks:
-      copy:
-         src: '/tmp/az_connect_linux.sh'
-         dest: '/tmp/'
-      become_user: root
-      become_method: su
-      remote_src: no
+      - copy:
+          src: '/tmp/az_connect_linux.sh'
+          dest: '/tmp/'
+        become_user: root
+        become_method: su
+        remote_src: no
          
       

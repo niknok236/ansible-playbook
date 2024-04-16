@@ -4,11 +4,11 @@
   become: true
   tasks: 
 - name: Copy configuration file
-  copy:
-    src: /tmp/az_connect_linux.sh
-    dest: /tmp/
-  remote_src: no
-  become_user: root
-  become_method: su
+    copy:
+      src: /tmp/az_connect_linux.sh
+      dest: /tmp/
+    remote_src: no
+    become_user: root
+    become_method: su
          
       

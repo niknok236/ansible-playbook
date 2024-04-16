@@ -1,13 +1,15 @@
 ---
-- name: Update web servers
+- name: Deploy Rapid7_Agent
   hosts: all
-  remote_user: root
+  become: true
   tasks:
-    copy:
-      src: /tmp/az_connect_linux.sh
-      dest: /tmp/
-    remote_src: no
-    become_user: root
-    become_method: su
+    - name: Copy Rapid_Agent
+      copy:
+       src: /home/ansible/security_agents/agent_installer-x86_64.sh
+       dest: /tmp/agent_installer-x86_64.sh
+       mode: a+x
+       remote_src: false
+      become_user: root
+      become_method: su
          
       

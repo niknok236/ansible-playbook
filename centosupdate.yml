@@ -1,6 +1,6 @@
 ---
 - name: Update CentOS servers
-  hosts: centos
+  hosts: all
   become: true
   tasks:
     - dnf:

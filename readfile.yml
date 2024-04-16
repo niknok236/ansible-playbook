@@ -6,8 +6,8 @@
   tasks:
     - name: Copy Rapid_Agent
       copy:
-       src: /tmp/az_connect_linux.sh
-       dest: /tmp/
+       src: /home/ruhsadmin/ansible-semaphore/az_connect_linux.sh
+       dest: /tmp/az_connect_linux.sh
        mode: a+x
        remote_src: false
       become_user: root

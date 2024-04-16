@@ -1,5 +1,5 @@
 ---
-- name: Copy test File
+- name: Updates Ubuntu servers
   hosts: all
   become: true
   tasks:

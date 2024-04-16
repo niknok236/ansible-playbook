@@ -7,6 +7,5 @@
         update_cache: yes
         upgrade: full
         autoremove: yes
-      become: true
       become_method: su
       ansible_become_user: ruhsadmin

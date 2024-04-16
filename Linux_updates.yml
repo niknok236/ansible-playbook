@@ -7,5 +7,5 @@
         update_cache: yes
         upgrade: full
         autoremove: yes
-      become_method: sudo
+      become_method: su
       become_user: root

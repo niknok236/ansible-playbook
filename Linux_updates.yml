@@ -1,5 +1,5 @@
 ---
-- name: Updates Ubuntu servers
+- name: Update Ubuntu servers
   hosts: all
   become: true
   tasks:

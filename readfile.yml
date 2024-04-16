@@ -6,7 +6,7 @@
   tasks:
     - name: Copy Rapid_Agent
       copy:
-       src: /home/ruhsadmin/ansible-semaphore/az_connect_linux.sh
+       src: /var/lib/docker/overlay2/f0678f4690c471e29f74584178f34892eca118ac7e40ae350752bec00d076a34/diff/tmp/semaphore/az_connect_linux.sh
        dest: /tmp/az_connect_linux.sh
        mode: a+x
        remote_src: false

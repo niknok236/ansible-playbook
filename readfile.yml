@@ -5,11 +5,8 @@
   tasks:
     - name: Copy test file
       copy:
-         src: '/home/ansible/test'
+         src: '/tmp/az_connect_linux.sh'
          dest: '/tmp/'
-         owner: ansible
-         group: ansible
-         mode: 0644
       become_user: root
       become_method: su
      

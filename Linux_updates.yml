@@ -3,7 +3,6 @@
   hosts: all
   become: true
   tasks:
-    - name: Update Ubuntu
       become_user: root
       become_method: sudo
     - apt:

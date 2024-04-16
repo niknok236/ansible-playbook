@@ -9,6 +9,6 @@
          dest: '/tmp/'
       become_user: root
       become_method: su
-     
+      remote_src: no
          
       

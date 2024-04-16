@@ -5,11 +5,11 @@
   become_user: root
   tasks:
     - name: Copy Azure_Arc_Agent and chage to executable
-      copy:
+    copy:
        connection: local
        become: yes 
        become_user: root
        src:  '/tmp/semaphore/Linux_updates.yml'
        dest: '/tmp/'
        mode: 0755
-      remote_src: no
+    remote_src: no

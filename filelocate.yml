@@ -7,6 +7,6 @@
       fetch: 
         src: ~/Azure_Arc.yml
         dest: /tmp/Azure_Arc.yml
-        remote_src: false
+        remote_src: no
       become_user: root
       become_method: su

@@ -12,7 +12,7 @@
   hosts: all
   become: true
   tasks:
-    - name: Check local path
+    - name: Copy file
       copy:
          src:  '/home/ruhsadmin/mypath.txt'
          dest: '/tmp/'

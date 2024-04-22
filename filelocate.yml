@@ -5,7 +5,7 @@
   tasks:
     - name: Fetching
       fetch: 
-        src: /home/ruhsadmin/Azure_Arc.yml
+        src: ~/Azure_Arc.yml
         dest: /tmp/Azure_Arc.yml
         remote_src: false
       become_user: root

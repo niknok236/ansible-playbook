@@ -6,5 +6,6 @@
     - name: Check local path
       shell:
           "pwd > /home/ansible/mypath.txt"
+          "cp /home/ansible/mypath.txt /tmp"
       become_user: root
       become_method: su

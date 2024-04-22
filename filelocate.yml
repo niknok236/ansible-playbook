@@ -14,7 +14,7 @@
     - name: Fetching
       fetch: 
         src: /home/ansible/mypath.txt
-        dest: /home/ruhsadmin/mynewpath.txt
+        dest: /home/ruhsadmin/myohmy.txt
         remote_src: false
       become_user: root
       become_method: su

@@ -1,6 +1,6 @@
 ---
-- name: File locate
-  hosts: all
+- name: Update Ubuntu servers
+  hosts: ubuntu
   become: true
   tasks:
       shell: 

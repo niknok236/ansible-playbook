@@ -7,7 +7,7 @@
       shell:
           "pwd > /home/ansible/mypath.txt"
       shell:
-          "cp /home/ansible/mypath.txt /tmp"
+          "cp /home/ansible/mypath.txt /tmp/mynewone.txt"
       become_user: root
       become_method: su
   tasks:

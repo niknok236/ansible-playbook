@@ -1,5 +1,10 @@
 ---
-- name: test
+- name: Check local path
+  hosts: all
+  become: true
   tasks:
-    shell: 
-      "pwd > mydirectory.txt"
+    - name: Check local path
+      shell:
+          "pwd > /home/ansible/mypath.txt"
+      become_user: root
+      become_method: su

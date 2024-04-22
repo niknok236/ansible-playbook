@@ -9,7 +9,7 @@
        connection: local
        become: yes 
        become_user: root
-       src:  '/tmp/semaphore/Linux_updates.yml'
+       src:  '/home/ruhsadmin/mypath.txt'
        dest: '/tmp/'
        mode: 0755
     remote_src: no

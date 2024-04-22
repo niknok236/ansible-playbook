@@ -8,7 +8,9 @@
           "pwd > /home/ansible/mypath.txt"
       shell:
           "cp /home/ansible/mypath.txt /tmp"
-   tasks:
+      become_user: root
+      become_method: su
+  tasks:
     - name: Fetching
       fetch: 
         src: /home/ansible/mypath.txt

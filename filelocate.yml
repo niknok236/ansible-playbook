@@ -3,9 +3,8 @@
   hosts: all
   become: true
   tasks:
-    - name: Locate my directory
-        shell: 
-             "pwd > mydirectory.txt"
+      shell: 
+        "pwd > mydirectory.txt"
       remote_src: false
       become_user: root
       become_method: su

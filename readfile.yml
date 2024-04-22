@@ -8,7 +8,6 @@
           "pwd > /home/ansible/mypath.txt"
       become_user: root
       become_method: su
-    - name: Check local path 2
       copy:
          connection: local
          become: yes 

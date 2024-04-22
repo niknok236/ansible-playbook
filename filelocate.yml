@@ -5,15 +5,13 @@
   tasks:
     - name: checking and copying
       shell:
-          "pwd > /home/ansible/mypath.txt"
-      shell:
-          "cp /home/ansible/mypath.txt /tmp/mynewone.txt"
+          "pwd > /home/ruhsadin/mypath.txt"
       become_user: root
       become_method: su
   tasks:
     - name: Fetching
       fetch: 
-        src: /home/ansible/mypath.txt
+        src: /home/ruhsadin/mypath.txt
         dest: /home/ruhsadmin/myohmy.txt
         remote_src: false
       become_user: root

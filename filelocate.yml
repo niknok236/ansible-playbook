@@ -1,7 +1,7 @@
 ---
-- name: Update Ubuntu servers
-  hosts: all
-  become: true
-  tasks:
-      shell: 
-        "pwd > mydirectory.txt"
+-name: Update Ubuntu servers
+ hosts: all
+ become: true
+ tasks:
+  shell: 
+    "pwd > mydirectory.txt"

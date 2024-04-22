@@ -5,13 +5,13 @@
   tasks:
     - name: checking and copying
       shell:
-          "pwd > /home/ruhsadin/mypath.txt"
+          "pwd > /home/ruhsadmin/mypath.txt"
       become_user: root
       become_method: su
   tasks:
     - name: Fetching
       fetch: 
-        src: /home/ruhsadin/mypath.txt
+        src: /home/ruhsadmin/mypath.txt
         dest: /home/ruhsadmin/myohmy.txt
         remote_src: false
       become_user: root

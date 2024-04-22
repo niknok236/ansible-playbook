@@ -1,7 +1,5 @@
 ---
--name: Update Ubuntu servers
- hosts: localhost
- become: true
- tasks:
-  shell: 
-    "pwd > mydirectory.txt"
+- name: test
+  tasks:
+    shell: 
+      "pwd > mydirectory.txt"

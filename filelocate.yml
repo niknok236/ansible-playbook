@@ -1,6 +1,6 @@
 ---
 -name: Update Ubuntu servers
- hosts: all
+ hosts: localhost
  become: true
  tasks:
   shell: 

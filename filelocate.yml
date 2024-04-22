@@ -1,10 +1,11 @@
 ---
 - name: File locate
-  hosts: localhost
+  hosts: all
   become: true
   tasks:
     - name: Locate my directory
-        shell: pwd > mydiectory.txt
+        shell: 
+             "pwd > mydirectory.txt"
       remote_src: false
       become_user: root
       become_method: su

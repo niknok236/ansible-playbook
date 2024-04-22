@@ -1,5 +1,4 @@
 ---
-- name: Azure_Arc_Agent Deployment
   hosts: all
   become: true
   become_user: root

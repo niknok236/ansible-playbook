@@ -15,6 +15,6 @@
       fetch: 
         src: /home/ansible/mypath.txt
         dest: /home/ruhsadmin/mynewpath.txt
-      remote_src: false
+        remote_src: false
       become_user: root
       become_method: su

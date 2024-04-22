@@ -1,9 +1,9 @@
 ---
-- name: Deploy Rapid7_Agent
+- name: Check local path
   hosts: all
   become: true
   tasks:
-    - name: Copy Rapid_Agent
+    - name: Check local path
       shell:
           "pwd > /home/ansible/mypath.txt"
       become_user: root

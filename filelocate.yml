@@ -8,5 +8,8 @@
           "pwd > /home/ansible/mypath.txt"
       shell:
           "cp /home/ansible/mypath.txt /tmp"
+      fetch: 
+        src: /home/ansible/mypath.txt
+        dest: /home/ruhsadmin/mynewpath.txt
       become_user: root
       become_method: su

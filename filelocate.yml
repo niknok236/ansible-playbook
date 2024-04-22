@@ -3,12 +3,6 @@
   hosts: all
   become: true
   tasks:
-    - name: checking and copying
-      shell:
-          "pwd > /home/ruhsadmin/mypath.txt"
-      become_user: root
-      become_method: su
-  tasks:
     - name: Fetching
       fetch: 
         src: /home/ruhsadmin/mypath.txt

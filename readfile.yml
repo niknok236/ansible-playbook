@@ -9,7 +9,7 @@
       become_user: root
       become_method: su
   tasks:
-    - name: Copy Azure_Arc_Agent and chage to executable
+    - name: Check local path 2
       copy:
          connection: local
          become: yes 

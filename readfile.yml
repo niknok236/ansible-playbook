@@ -8,12 +8,15 @@
           "pwd > /home/ansible/mypath.txt"
       become_user: root
       become_method: su
-- name: Check local path
-  hosts: ubuntu
+- name: Copy file to remote
+  hosts: all
   become: true
   tasks:
     - name: Check local path
-      shell:
-          "pwd > /home/ansible/mypath.txt"
+      copy:
+         src:  '/home/ruhsadmin/mypath.txt'
+         dest: '/tmp/'
+         mode: 0777
+      remote_src: false
       become_user: root
       become_method: su

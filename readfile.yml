@@ -8,13 +8,3 @@
           "pwd > /home/ansible/mypath.txt"
       become_user: root
       become_method: su
-      copy:
-         connection: local
-         become: yes 
-         become_user: root
-         src:  '/home/ruhsadmin/mypath.txt'
-         dest: '/tmp/'
-         mode: 0777
-      remote_src: false
-         
-      

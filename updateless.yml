@@ -1,0 +1,9 @@
+---
+- name: Update Less CVE-2024-32487
+  hosts: ubuntu
+  become: true
+  tasks:
+    - shell:
+        "apt update && apt install --only-upgrade -y less"
+      become_user: root
+      become_method: su

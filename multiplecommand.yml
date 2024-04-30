@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: Run multiple commands using the command module
+    command:
+      - echo "Hello, World!"
+      - ls -l /tmp
+      - ps aux

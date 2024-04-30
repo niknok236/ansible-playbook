@@ -3,7 +3,7 @@
   hosts: ubuntu
   become: true
   tasks:
-      command:
+    - command:
         - timedatectl set-timezone America/Los_Angeles
         - apt install systemd-timesyncd -y
         - sed -i 's/#NTP=/NTP=ntp1.co.riverside.ca.us/' /etc/systemd/timesyncd.conf

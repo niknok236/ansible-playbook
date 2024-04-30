@@ -1,0 +1,14 @@
+---
+- name: Update NTP
+  hosts: ubuntu
+  become: true
+  tasks:
+    - shell: |
+        "timedatectl set-timezone America/Los_Angeles"
+        "apt install systemd-timesyncd -y"
+        "sed -i 's/#NTP=/NTP=ntp1.co.riverside.ca.us/' /etc/systemd/timesyncd.conf"
+        "sed -i 's/#FallbackNTP=ntp.ubuntu.com/FallbackNTP=ntp2.co.riverside.ca.us/' /etc/systemd/timesyncd.conftestntp.txt"
+        "systemctl enable systemd-timesyncd"
+        "systemctl restart systemd-timesyncd"
+      become_user: root
+      become_method: su

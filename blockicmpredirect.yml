@@ -1,14 +1,14 @@
 ---
-  - name: net/ipv4/conf/all/accept_redirects = 0
-    hosts: ubuntu
-    become: true
-    tasks:
-      sysctl:
-        name: net/ipv4/conf/all/accept_redirects
-        value: 0
-        sysctl_set: yes
-        state: present
-        sysctl_file: /etc/sysctl.conf
-        reload: yes
-    become_user: root
-    become_method: su	
+- name: net/ipv4/conf/all/accept_redirects = 0
+  hosts: ubuntu
+  become: true
+  tasks:
+    sysctl:
+      name: net/ipv4/conf/all/accept_redirects
+      value: 0
+      sysctl_set: yes
+      state: present
+      sysctl_file: /etc/sysctl.conf
+      reload: yes
+  become_user: root
+  become_method: su	

@@ -3,9 +3,12 @@
   hosts: ubuntu
   become: true
   tasks:
-    - apt:
-        update_cache: yes
-        upgrade: full
-        autoremove: yes
+    - sysctl::
+        name: net/ipv4/conf/all/accept_redirects
+        value: 0
+        sysctl_set: yes
+        state: present
+        sysctl_file: /etc/sysctl.conf
+        reload: yes
       become_user: root
       become_method: su

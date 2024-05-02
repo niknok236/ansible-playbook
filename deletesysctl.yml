@@ -1,10 +1,11 @@
 ---
 - name: Disable ICMP redirect support
-  hosts: all
+  hosts: ubuntu
   become: true
   tasks:
     - shell: |
-         sed -i '/sysctl -w/d' /etc/sysctl.conf
-         #sysctl -p
+         sed -i '/-e net/d' /etc/sysctl.conf
+         sed -i '/net/d' /etc/sysctl.conf
+        #sysctl -p
       become_user: root
       become_method: su

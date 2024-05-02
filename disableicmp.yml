@@ -4,8 +4,12 @@
   become: true
   tasks:
     - shell: |
-         #echo  -e "net/ipv4/conf/all/accept_redirects = 0\nnet/ipv4/conf/all/send_redirects = 0\nnet/ipv6/conf/all/accept_redirects = 0" | sudo tee -a /etc/sysctl.conf > /dev/null
-         sysctl -p
+        echo -n 'net/ipv4/conf/all/accept_redirects = 0\n' >> /etc/sysctl.conf
+        echo -n 'net/ipv4/conf/all/send_redirects = 0\n' >> /etc/sysctl.conf
+        echo -n 'net/ipv6/conf/all/accept_redirects = 0\n' >> /etc/sysctl.conf
+        sysctl -p
+      become_user: root
+      become_method: su
       become_user: root
       become_method: su
 - name: Disable ICMP redirect support Centos7
@@ -13,7 +17,7 @@
   become: true
   tasks:
     - shell: |
-         #echo  -e "net.ipv4.conf.all.accept_redirects = 0\nnet.ipv4.conf.all.send_redirects = 0\nnet.ipv6.conf.all.accept_redirects = 0" | sudo tee -a /etc/sysctl.conf > /dev/null
+         echo  -e "net.ipv4.conf.all.accept_redirects = 0\nnet.ipv4.conf.all.send_redirects = 0\nnet.ipv6.conf.all.accept_redirects = 0" | sudo tee -a /etc/sysctl.conf > /dev/null
          sysctl -p
       become_user: root
       become_method: su

@@ -4,7 +4,7 @@
   become: true
   tasks:
     - shell: |
-        echo -e "net/ipv4/conf/all/accept_redirects = 0\nnet/ipv4/conf/all/send_redirects = 0\nnet/ipv6/conf/all/accept_redirects = 0" | sudo tee -a /etc/sysctl.conf > /dev/null
+        echo -e 'net/ipv4/conf/all/accept_redirects = 0\nnet/ipv4/conf/all/send_redirects = 0\nnet/ipv6/conf/all/accept_redirects = 0' | sudo tee -a /etc/sysctl.conf > /dev/null
         #sed -i '/-e net/d' /etc/sysctl.conf
         #sed -i '/net/d' /etc/sysctl.conf
         #sysctl -p

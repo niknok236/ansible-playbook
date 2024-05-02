@@ -1,10 +1,19 @@
 ---
-- name: Disable ICMP redirect support
-  hosts: all
+- name: Disable ICMP redirect support Ubuntu
+  hosts: ubuntu
   become: true
   tasks:
     - shell: |
-         echo  -e "sysctl -w net.ipv4.conf.all.accept_redirects=0\nsysctl -w net.ipv4.conf.default.accept_redirects=0\nsysctl -w net.ipv4.conf.all.secure_redirects=0\nsysctl -w net.ipv4.conf.default.secure_redirects=0" | sudo tee -a /etc/sysctl.conf > /dev/null
+         echo  -e "net/ipv4/conf/all/accept_redirects = 0\nnet/ipv4/conf/all/send_redirects = 0\nnet/ipv6/conf/all/accept_redirects = 0" | sudo tee -a /etc/sysctl.conf > /dev/null
+         sysctl -p
+      become_user: root
+      become_method: su
+- name: Disable ICMP redirect support Centos7
+  hosts: centos
+  become: true
+  tasks:
+    - shell: |
+         echo  -e "net.ipv4.conf.all.accept_redirects = 0\nnet.ipv4.conf.all.send_redirects = 0\nnet.ipv6.conf.all.accept_redirects = 0" | sudo tee -a /etc/sysctl.conf > /dev/null
          sysctl -p
       become_user: root
       become_method: su

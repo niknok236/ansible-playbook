@@ -6,7 +6,7 @@
     - shell: |
          timedatectl set-timezone America/Los_Angeles
          apt install systemd-timesyncd -y
-         #sed -i 's/#NTP=/NTP=ntp1.xxxxx/' /etc/systemd/timesyncd.conf
+         sed -i 's/#NTP=/NTP=ntp1.xxxxx/' /etc/systemd/timesyncd.conf
          sed -i 's/#FallbackNTP=ntp.ubuntu.com/FallbackNTP=ntp2.xxxxx/' /etc/systemd/timesyncd.conf
          systemctl enable systemd-timesyncd
          systemctl restart systemd-timesyncd

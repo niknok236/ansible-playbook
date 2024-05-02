@@ -1,5 +1,5 @@
 ---
-- name: net/ipv4/conf/all/accept_redirects = 0
+- name: Update Ubuntu servers
   hosts: ubuntu
   become: true
   tasks:

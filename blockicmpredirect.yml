@@ -1,6 +1,5 @@
 ---
-- name: Update Ubuntu servers
-  hosts: ubuntu
+- hosts: ubuntu
   become: true
   tasks:
     sysctl:

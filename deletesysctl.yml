@@ -5,8 +5,8 @@
   tasks:
     - shell: |
         echo -n 'net/ipv4/conf/all/accept_redirects = 0' >> /etc/sysctl.conf
-        #echo -e "net/ipv4/conf/all/send_redirects = 0" | sudo tee -a /etc/sysctl.conf > /dev/null
-        #echo -e "net/ipv6/conf/all/accept_redirects = 0" | sudo tee -a /etc/sysctl.conf > /dev/null
+        echo -n 'net/ipv4/conf/all/send_redirects = 0' >> /etc/sysctl.conf
+        echo -n 'net/ipv6/conf/all/accept_redirects = 0' >> /etc/sysctl.conf
         #sed -i 's/-e net/ipv4/conf/all/accept_redirects = 0/net/ipv4/conf/all/accept_redirects = 0/' /etc/sysctl.conf
         #sed -i '/-e net/d' /etc/sysctl.conf
         #sed -i '/net/d' /etc/sysctl.conf

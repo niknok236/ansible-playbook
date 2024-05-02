@@ -1,13 +1,11 @@
 ---
-- hosts: ubuntu
+- name: Update Ubuntu servers
+  hosts: all
   become: true
   tasks:
-    sysctl:
-      name: net/ipv4/conf/all/accept_redirects
-      value: 0
-      sysctl_set: yes
-      state: present
-      sysctl_file: /etc/sysctl.conf
-      reload: yes
-  become_user: root
-  become_method: su	
+    - apt:
+        update_cache: yes
+        upgrade: full
+        autoremove: yes
+      become_user: root
+      become_method: su

@@ -1,0 +1,9 @@
+---
+- name: Update Ubuntu Libarchive13 for Linux CVE-2024-26256
+  hosts: ubuntu
+  become: true
+  tasks:
+    - shell:
+        "sudo apt-get update -y && apt-get install libarchive13 -y"
+      become_user: root
+      become_method: su

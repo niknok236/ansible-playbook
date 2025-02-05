@@ -5,7 +5,7 @@
   tasks:
     - name: Copy file to remote server
       copy:
-      src:/tmp/az_connect_linux.sh
-      dest: /tmp
+        src: /tmp/az_connect_linux.sh
+        dest: /tmp
       become_user: root
       become_method: su

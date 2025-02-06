@@ -20,13 +20,13 @@
         perms: no
       delegate_to: localhost
 
-    - name: Change permissions for the scripts
-      file:
-        path: "/tmp/Security_Agents/{{ item }}"
-        mode: '0755'
-      loop:
-        - rapid7.sh
-        - crowdstrike.sh
+#    - name: Change permissions for the scripts
+#      file:
+#        path: "/tmp/Security_Agents/{{ item }}"
+#        mode: '0755'
+#      loop:
+#        - rapid7.sh
+#        - crowdstrike.sh
 
 #    - name: Execute rapid7.sh
 #      command: /bin/bash /tmp/security_agents/rapid7.sh

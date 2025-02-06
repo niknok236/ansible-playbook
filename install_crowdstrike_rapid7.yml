@@ -28,20 +28,20 @@
         - rapid7.sh
         - crowdstrike.sh
 
-    - name: Execute rapid7.sh
-      command: /bin/bash /tmp/security_agents/rapid7.sh
-      register: rapid7_output
-      changed_when: rapid7_output.rc != 0
+#    - name: Execute rapid7.sh
+#      command: /bin/bash /tmp/security_agents/rapid7.sh
+#      register: rapid7_output
+#      changed_when: rapid7_output.rc != 0
 
-    - name: Execute crowdstrike.sh
-      command: /bin/bash /tmp/security_agents/crowdstrike.sh
-      register: crowdstrike_output
-      changed_when: crowdstrike_output.rc != 0
+#   - name: Execute crowdstrike.sh
+#     command: /bin/bash /tmp/security_agents/crowdstrike.sh
+#      register: crowdstrike_output
+#      changed_when: crowdstrike_output.rc != 0
 
-    - name: Debug Rapid7 script output
-      debug:
-        msg: "{{ rapid7_output.stdout }}"
+#   - name: Debug Rapid7 script output
+#      debug:
+#        msg: "{{ rapid7_output.stdout }}"
 
-    - name: Debug CrowdStrike script output
-      debug:
-        msg: "{{ crowdstrike_output.stdout }}"
+#    - name: Debug CrowdStrike script output
+#      debug:
+#        msg: "{{ crowdstrike_output.stdout }}"

@@ -6,14 +6,14 @@
     
     - name: Ensure /tmp/security_agents directory exists on remote
       file:
-        path: /tmp/security_agents
+        path: /tmp/Security_Agents
         state: directory
         mode: '0755'
 
     - name: Copy security_agents folder to remote server
       synchronize:
-        src: /tmp/semaphore/security_agents/
-        dest: /tmp/security_agents
+        src: /tmp/semaphore/Security_Agents/
+        dest: /tmp/Security_Agents
         recursive: yes
         owner: no
         group: no
@@ -22,7 +22,7 @@
 
     - name: Change permissions for the scripts
       file:
-        path: "/tmp/security_agents/{{ item }}"
+        path: "/tmp/Security_Agents/{{ item }}"
         mode: '0755'
       loop:
         - rapid7.sh

@@ -18,7 +18,7 @@
         owner: no
         group: no
         perms: no
-      delegate_to: localhost
+#      delegate_to: localhost
 
 #    - name: Change permissions for the scripts
 #      file:

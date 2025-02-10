@@ -5,8 +5,10 @@
   tasks:
     - name: Copy file to remote server
       copy:
-        src: /tmp/semaphore/az_connect_linux.sh
-        dest: /tmp/az_connect_linux.sh
+        #src: /tmp/semaphore/az_connect_linux.sh
+        #dest: /tmp/az_connect_linux.sh
+        src: /tmp/semaphore/test
+        dest: /tmp/test
         owner: semaphore
         group: semaphore
         mode: '0644'

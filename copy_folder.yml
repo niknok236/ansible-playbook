@@ -1,0 +1,11 @@
+- name: Copy folder to remote server using rsync
+  hosts: ubuntu
+  become: true
+  tasks:
+    - name: Sync folder to remote server
+      synchronize:
+        src: /tmp/semaphore/test/
+        dest: /tmp/test/
+        archive: yes
+        recursive: yes
+        delete: no

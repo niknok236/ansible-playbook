@@ -11,4 +11,4 @@
         dest: /tmp/test
         owner: semaphore
         group: semaphore
-        mode: '0644'
+        mode: '0755'

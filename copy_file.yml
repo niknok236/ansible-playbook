@@ -7,6 +7,6 @@
       copy:
         src: /tmp/semaphore/falcon-sensor_7.20.0-17306_amd64.deb
         dest: /tmp/falcon-sensor_7.20.0-17306_amd64.deb
-        #owner: semaphore
-        #group: semaphore
-        #mode: '0755'
+        owner: semaphore
+        group: semaphore
+        mode: '0644'

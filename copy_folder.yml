@@ -3,9 +3,9 @@
   become: true
   tasks:
     - name: Sync folder to remote server
-      synchronize:
+      copy:
         src: /tmp/semaphore/test/
         dest: /tmp/test/
-        archive: yes
-        recursive: yes
-        delete: no
+        #archive: yes
+        #recursive: yes
+        #delete: no

@@ -8,7 +8,7 @@
         #src: /tmp/semaphore/az_connect_linux.sh
         #dest: /tmp/az_connect_linux.sh
         src: /tmp/semaphore/test
-        dest: /tmp/test
+        dest: /tmp/
         owner: semaphore
         group: semaphore
         mode: '0755'

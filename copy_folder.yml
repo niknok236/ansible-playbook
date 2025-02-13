@@ -5,7 +5,7 @@
     - name: Sync folder to remote server
       copy:
         src: /test
-        dest: /tmp/test/
+        dest: /tmp/
         archive: yes
         recursive: yes
         delete: no

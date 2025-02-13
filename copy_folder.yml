@@ -6,6 +6,6 @@
       copy:
         src: /test/
         dest: /tmp/test/
-        #archive: yes
-        #recursive: yes
-        #delete: no
+        archive: yes
+        recursive: yes
+        delete: no

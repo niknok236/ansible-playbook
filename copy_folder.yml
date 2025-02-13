@@ -1,5 +1,5 @@
 - name: Copy folder to remote server using rsync
-  hosts: ubuntu
+  hosts: website
   become: true
   tasks:
     - name: Sync folder to remote server

@@ -4,7 +4,7 @@
   tasks:
     - name: Sync folder to remote server
       copy:
-        src: /test
+        src: test
         dest: /tmp/
         archive: yes
         recursive: yes

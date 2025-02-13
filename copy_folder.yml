@@ -5,7 +5,7 @@
     - name: Sync folder to remote server
       copy:
         src: security_agents
-        dest: /tmp/
+        dest: /home/semaphore/security_agents
         archive: yes
         recursive: yes
         delete: no

@@ -5,7 +5,7 @@
   tasks:
     - name: Copy file to remote server
       copy:
-        src: test.txt
+        src: /var/lib/semaphore/files/az_connect_linux.sh
         dest: /tmp/
         owner: semaphore
         group: semaphore

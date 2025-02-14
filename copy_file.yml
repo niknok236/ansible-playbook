@@ -6,7 +6,7 @@
     - name: Copy file to remote server
       copy:
         src: falcon-sensor_7.20.0-17306_amd64.deb
-        dest: /tmp/
+        dest: /home/semaphore/
         owner: semaphore
         group: semaphore
         mode: '0644'

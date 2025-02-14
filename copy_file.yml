@@ -5,7 +5,7 @@
   tasks:
     - name: Copy file to remote server
       copy:
-        src: falcon-sensor_7.20.0-17306_amd64.deb
+        src: crowdstrike.sh
         dest: /home/semaphore/
         owner: semaphore
         group: semaphore
